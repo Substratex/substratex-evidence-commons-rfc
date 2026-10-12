@@ -1,0 +1,136 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:substratex:evidence-commons:1.0:schema:aggregation-record",
+  "title": "ECS Aggregation Record",
+  "type": "object",
+  "required": [
+    "ecs_version",
+    "aggregation_id",
+    "contract",
+    "population",
+    "included_artifacts",
+    "excluded",
+    "result",
+    "boundary_statement",
+    "created_at"
+  ],
+  "properties": {
+    "ecs_version": {
+      "const": "1.0"
+    },
+    "aggregation_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "contract": {
+      "type": "object",
+      "required": [
+        "contract_id",
+        "version",
+        "purpose",
+        "inclusion_criteria",
+        "exclusion_criteria",
+        "duplicate_policy",
+        "challenge_policy"
+      ],
+      "properties": {
+        "contract_id": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        },
+        "purpose": {
+          "type": "string"
+        },
+        "inclusion_criteria": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "exclusion_criteria": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "duplicate_policy": {
+          "type": "string"
+        },
+        "challenge_policy": {
+          "type": "string"
+        },
+        "comparison_profile": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "population": {
+      "type": "object",
+      "required": [
+        "description"
+      ],
+      "properties": {
+        "description": {
+          "type": "string"
+        },
+        "date_range": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "horizon": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "included_artifacts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "excluded": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "artifact_id",
+          "reason"
+        ],
+        "properties": {
+          "artifact_id": {
+            "type": "string"
+          },
+          "reason": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "result": {
+      "type": "object"
+    },
+    "boundary_statement": {
+      "type": "string",
+      "minLength": 1
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "additionalProperties": false
+}

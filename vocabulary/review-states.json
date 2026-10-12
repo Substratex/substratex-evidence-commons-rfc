@@ -1,0 +1,12 @@
+{
+  "namespace": "urn:substratex:evidence-commons:1.0:review-state",
+  "values": [
+    "unreviewed",
+    "under_review",
+    "contested",
+    "upheld",
+    "revised",
+    "superseded",
+    "withdrawn"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "namespace": "urn:substratex:evidence-commons:1.0:preservation-event",
+  "values": [
+    "ingest",
+    "fixity_check",
+    "replication",
+    "migration",
+    "redaction",
+    "challenge_update",
+    "supersession",
+    "withdrawal",
+    "repackage",
+    "export",
+    "import"
+  ]
+}

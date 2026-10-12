@@ -1,0 +1,21 @@
+{
+  "ecs_version": "1.0",
+  "node_id": "urn:example:node:commons-1",
+  "operator": "Example Commons Operator",
+  "profiles": [
+    "ECS-Artifact",
+    "ECS-Admission",
+    "ECS-Disclosure",
+    "ECS-Comparison",
+    "ECS-Preservation",
+    "ECS-Federation"
+  ],
+  "endpoint_or_location": "https://example.invalid/commons",
+  "policy_version": "2026-10",
+  "supported_evidence_profiles": [
+    "RES"
+  ],
+  "supported_schema_versions": [
+    "ECS-1.0"
+  ]
+}

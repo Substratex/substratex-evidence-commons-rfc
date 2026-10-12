@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:substratex:evidence-commons:1.0:schema:supersession",
+  "title": "ECS Supersession",
+  "type": "object",
+  "required": [
+    "ecs_version",
+    "supersession_id",
+    "new_ref",
+    "old_ref",
+    "scope",
+    "effective_at"
+  ],
+  "properties": {
+    "ecs_version": {
+      "const": "1.0"
+    },
+    "supersession_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "new_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "old_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "scope": {
+      "type": "string",
+      "minLength": 1
+    },
+    "effective_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "reason": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

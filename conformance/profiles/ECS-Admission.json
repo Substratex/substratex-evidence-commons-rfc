@@ -1,0 +1,9 @@
+{
+  "profile": "ECS-Admission",
+  "ecs_version": "1.0",
+  "required_object_types": [
+    "commons-artifact-envelope",
+    "admission-record"
+  ],
+  "certification_note": "Conformance is not SubstrateX certification."
+}

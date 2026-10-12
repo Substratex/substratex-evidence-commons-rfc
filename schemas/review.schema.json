@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:substratex:evidence-commons:1.0:schema:review",
+  "title": "ECS Review",
+  "type": "object",
+  "required": [
+    "ecs_version",
+    "review_id",
+    "target_refs",
+    "process",
+    "outcome",
+    "reviewed_at"
+  ],
+  "properties": {
+    "ecs_version": {
+      "const": "1.0"
+    },
+    "review_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "target_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "process": {
+      "type": "string",
+      "minLength": 1
+    },
+    "outcome": {
+      "enum": [
+        "upheld",
+        "revised",
+        "superseded",
+        "withdrawn",
+        "unresolved"
+      ]
+    },
+    "reviewed_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "reviewer_role": {
+      "type": "string",
+      "minLength": 1
+    },
+    "finding": {
+      "type": "string"
+    },
+    "unresolved_questions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}

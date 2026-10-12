@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:substratex:evidence-commons:1.0:schema:federation-transfer",
+  "title": "ECS Federation Transfer",
+  "type": "object",
+  "required": [
+    "ecs_version",
+    "transfer_id",
+    "source_node",
+    "destination_node",
+    "artifact_id",
+    "mode",
+    "disclosure",
+    "integrity",
+    "transferred_at"
+  ],
+  "properties": {
+    "ecs_version": {
+      "const": "1.0"
+    },
+    "transfer_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_node": {
+      "type": "string",
+      "minLength": 1
+    },
+    "destination_node": {
+      "type": "string",
+      "minLength": 1
+    },
+    "artifact_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "mode": {
+      "$ref": "urn:substratex:evidence-commons:1.0:schema:common-defs#/$defs/transferMode"
+    },
+    "representation": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "custody_intent": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "disclosure": {
+      "$ref": "urn:substratex:evidence-commons:1.0:schema:common-defs#/$defs/disclosurePosture"
+    },
+    "integrity": {
+      "$ref": "urn:substratex:evidence-commons:1.0:schema:common-defs#/$defs/digest"
+    },
+    "transferred_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "prior_custody_ref": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "challenge_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "supersession_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}

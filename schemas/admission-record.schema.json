@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:substratex:evidence-commons:1.0:schema:admission-record",
+  "title": "ECS Admission Record",
+  "type": "object",
+  "required": [
+    "ecs_version",
+    "admission_id",
+    "artifact_id",
+    "node_id",
+    "evaluated_at",
+    "disposition",
+    "checks"
+  ],
+  "properties": {
+    "ecs_version": {
+      "const": "1.0"
+    },
+    "admission_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "artifact_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "node_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evaluated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "disposition": {
+      "$ref": "urn:substratex:evidence-commons:1.0:schema:common-defs#/$defs/admissionDisposition"
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "identity",
+        "schema",
+        "provenance",
+        "disclosure",
+        "integrity"
+      ],
+      "properties": {
+        "identity": {
+          "type": "boolean"
+        },
+        "schema": {
+          "type": "boolean"
+        },
+        "provenance": {
+          "type": "boolean"
+        },
+        "disclosure": {
+          "type": "boolean"
+        },
+        "integrity": {
+          "type": "boolean"
+        },
+        "policy": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+    "restrictions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "reasons": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "policy_version": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,28 @@
+{
+  "ecs_version": "1.0",
+  "report_id": "urn:substratex:evidence-commons:1.0:report:initial-reference-validation",
+  "implementation": {
+    "name": "ECS repository reference validator",
+    "version": "1.0.0-rfc.1",
+    "language": "Python"
+  },
+  "profiles": [
+    "ECS-Artifact",
+    "ECS-Admission",
+    "ECS-Disclosure",
+    "ECS-Comparison",
+    "ECS-Aggregation",
+    "ECS-Preservation",
+    "ECS-Federation"
+  ],
+  "corpus_version": "1.0-rfc.1",
+  "results": {
+    "passed": 41,
+    "failed": 0,
+    "skipped": 0
+  },
+  "deviations": [],
+  "environment": "Python 3.13.5",
+  "created_at": "2026-10-12T16:30:00Z",
+  "integrity": null
+}

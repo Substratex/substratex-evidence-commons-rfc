@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:substratex:evidence-commons:1.0:schema:withdrawal",
+  "title": "ECS Withdrawal",
+  "type": "object",
+  "required": [
+    "ecs_version",
+    "withdrawal_id",
+    "artifact_id",
+    "effective_at",
+    "reason_category"
+  ],
+  "properties": {
+    "ecs_version": {
+      "const": "1.0"
+    },
+    "withdrawal_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "artifact_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "effective_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "reason_category": {
+      "enum": [
+        "privacy",
+        "legal",
+        "conformance",
+        "superseded",
+        "originator_request",
+        "governance",
+        "other"
+      ]
+    },
+    "reason_detail": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "replacement_ref": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

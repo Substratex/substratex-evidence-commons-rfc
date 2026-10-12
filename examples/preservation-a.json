@@ -1,0 +1,18 @@
+{
+  "ecs_version": "1.0",
+  "preservation_id": "urn:example:preservation:a1",
+  "artifact_id": "urn:example:artifact:a",
+  "event_type": "ingest",
+  "custodian": "urn:example:node:commons-1",
+  "integrity": {
+    "algorithm": "sha256",
+    "value": "0000000000000000000000000000000000000000000000000000000000000000",
+    "scope": "artifact-envelope"
+  },
+  "preserved_at": "2026-10-12T16:02:00Z",
+  "disclosure": "derived_evidence_only",
+  "review_state": "unreviewed",
+  "prior_preservation_ref": null,
+  "migration": null,
+  "redaction_history_refs": []
+}

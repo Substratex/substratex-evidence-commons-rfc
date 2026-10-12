@@ -1,0 +1,142 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:substratex:evidence-commons:1.0:schema:commons-artifact-envelope",
+  "title": "ECS Commons Artifact Envelope",
+  "type": "object",
+  "required": [
+    "ecs_version",
+    "artifact_id",
+    "origin",
+    "evidence_profile",
+    "evidence_object_ref",
+    "disclosure",
+    "publication",
+    "integrity",
+    "provenance",
+    "review_state"
+  ],
+  "properties": {
+    "ecs_version": {
+      "const": "1.0"
+    },
+    "artifact_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "artifact_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "origin": {
+      "type": "object",
+      "required": [
+        "originator_id",
+        "origin_system"
+      ],
+      "properties": {
+        "originator_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "origin_system": {
+          "type": "string",
+          "minLength": 1
+        },
+        "origin_node": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "evidence_profile": {
+      "type": "object",
+      "required": [
+        "standard",
+        "version",
+        "conformance"
+      ],
+      "properties": {
+        "standard": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "conformance": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "evidence_object_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evidence_payload": {
+      "type": [
+        "object",
+        "array",
+        "string",
+        "null"
+      ]
+    },
+    "disclosure": {
+      "$ref": "urn:substratex:evidence-commons:1.0:schema:common-defs#/$defs/disclosurePosture"
+    },
+    "publication": {
+      "$ref": "urn:substratex:evidence-commons:1.0:schema:common-defs#/$defs/publicationClass"
+    },
+    "integrity": {
+      "$ref": "urn:substratex:evidence-commons:1.0:schema:common-defs#/$defs/digest"
+    },
+    "provenance": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "relation",
+          "target"
+        ],
+        "properties": {
+          "relation": {
+            "type": "string",
+            "minLength": 1
+          },
+          "target": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "review_state": {
+      "$ref": "urn:substratex:evidence-commons:1.0:schema:common-defs#/$defs/reviewState"
+    },
+    "challenge_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "supersedes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "extensions": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": false
+}

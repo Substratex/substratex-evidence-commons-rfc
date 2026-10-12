@@ -1,0 +1,10 @@
+{
+  "namespace": "urn:substratex:evidence-commons:1.0:disclosure-posture",
+  "values": [
+    "complete_source",
+    "redacted_source",
+    "derived_evidence_only",
+    "metadata_only",
+    "withheld_restricted"
+  ]
+}

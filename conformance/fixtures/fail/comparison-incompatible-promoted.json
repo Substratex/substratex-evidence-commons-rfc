@@ -1,0 +1,33 @@
+{
+  "fixture_id": "comparison-incompatible-promoted",
+  "schema": "comparability-assessment",
+  "expect_schema_valid": true,
+  "expect_semantic": "fail",
+  "notes": "",
+  "object": {
+    "ecs_version": "1.0",
+    "assessment_id": "urn:example:comparison:ab",
+    "purpose": "compare bounded evidence under same method family",
+    "artifact_ids": [
+      "urn:example:artifact:a",
+      "urn:example:artifact:b"
+    ],
+    "dimensions": {
+      "schema": "compatible",
+      "evidence_horizon": "compatible",
+      "method_version": "incompatible",
+      "source_qualification": "compatible",
+      "coordinate_system": "compatible",
+      "claim_definition": "compatible",
+      "disclosure": "conditional",
+      "population_context": "compatible",
+      "validation_state": "compatible"
+    },
+    "conditions": [
+      "comparison limited to fields available in both derived-evidence packages"
+    ],
+    "outcome": "comparable",
+    "evaluated_at": "2026-10-12T16:10:00Z",
+    "contract_ref": "urn:example:comparison-contract:1"
+  }
+}

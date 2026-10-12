@@ -1,0 +1,28 @@
+{
+  "fixture_id": "admission-semantic-silent-repair",
+  "schema": "admission-record",
+  "expect_schema_valid": true,
+  "expect_semantic": "fail",
+  "notes": "Semantic rule: admitted disposition with failed required provenance check must fail.",
+  "object": {
+    "ecs_version": "1.0",
+    "admission_id": "urn:example:admission:a",
+    "artifact_id": "urn:example:artifact:a",
+    "node_id": "urn:example:node:commons-1",
+    "evaluated_at": "2026-10-12T16:00:00Z",
+    "disposition": "admitted",
+    "checks": {
+      "identity": true,
+      "schema": true,
+      "provenance": false,
+      "disclosure": true,
+      "integrity": true,
+      "policy": true
+    },
+    "restrictions": [
+      "research access only"
+    ],
+    "reasons": [],
+    "policy_version": "2026-10"
+  }
+}

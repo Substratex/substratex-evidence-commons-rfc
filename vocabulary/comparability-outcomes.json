@@ -1,0 +1,9 @@
+{
+  "namespace": "urn:substratex:evidence-commons:1.0:comparability-outcome",
+  "values": [
+    "comparable",
+    "conditionally_comparable",
+    "non_comparable",
+    "indeterminate"
+  ]
+}

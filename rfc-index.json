@@ -1,0 +1,81 @@
+{
+  "standard": "Evidence Commons Standard",
+  "acronym": "ECS",
+  "target_version": "1.0",
+  "status": "Draft",
+  "namespace": "urn:substratex:evidence-commons:1.0:",
+  "originator": "Arjay Asadi",
+  "publisher": "SubstrateX",
+  "rfcs": [
+    {
+      "id": "RFC-EC-0000",
+      "title": "RFC Process and Status Model",
+      "status": "Draft"
+    },
+    {
+      "id": "RFC-EC-0001",
+      "title": "Commons Architecture",
+      "status": "Draft"
+    },
+    {
+      "id": "RFC-EC-0002",
+      "title": "Artifact Admission",
+      "status": "Draft"
+    },
+    {
+      "id": "RFC-EC-0003",
+      "title": "Disclosure and Privacy",
+      "status": "Draft"
+    },
+    {
+      "id": "RFC-EC-0004",
+      "title": "Publication and Access Classes",
+      "status": "Draft"
+    },
+    {
+      "id": "RFC-EC-0005",
+      "title": "Comparability",
+      "status": "Draft"
+    },
+    {
+      "id": "RFC-EC-0006",
+      "title": "Challenge, Review, Supersession, and Withdrawal",
+      "status": "Draft"
+    },
+    {
+      "id": "RFC-EC-0007",
+      "title": "Aggregation",
+      "status": "Draft"
+    },
+    {
+      "id": "RFC-EC-0008",
+      "title": "Preservation",
+      "status": "Draft"
+    },
+    {
+      "id": "RFC-EC-0009",
+      "title": "Federation and Interchange",
+      "status": "Draft"
+    },
+    {
+      "id": "RFC-EC-0010",
+      "title": "Commons Governance",
+      "status": "Draft"
+    },
+    {
+      "id": "RFC-EC-0011",
+      "title": "RES / EGC / Evidence Commons Boundary",
+      "status": "Draft"
+    },
+    {
+      "id": "RFC-EC-0012",
+      "title": "Conformance Profiles and Test Requirements",
+      "status": "Draft"
+    },
+    {
+      "id": "RFC-EC-0013",
+      "title": "JSON Interchange Profile",
+      "status": "Draft"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "profile": "ECS-Disclosure",
+  "ecs_version": "1.0",
+  "required_object_types": [
+    "commons-artifact-envelope",
+    "disclosure-profile",
+    "publication-record"
+  ],
+  "certification_note": "Conformance is not SubstrateX certification."
+}

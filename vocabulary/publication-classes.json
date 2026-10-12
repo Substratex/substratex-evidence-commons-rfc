@@ -1,0 +1,11 @@
+{
+  "namespace": "urn:substratex:evidence-commons:1.0:publication-class",
+  "values": [
+    "public",
+    "restricted",
+    "research",
+    "organizational",
+    "exploratory",
+    "withdrawn"
+  ]
+}

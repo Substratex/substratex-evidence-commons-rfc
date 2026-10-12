@@ -1,0 +1,11 @@
+{
+  "namespace": "urn:substratex:evidence-commons:1.0:admission-disposition",
+  "values": [
+    "admitted",
+    "admitted_restricted",
+    "exploratory",
+    "quarantined",
+    "refused",
+    "withdrawn"
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:substratex:evidence-commons:1.0:schema:disclosure-profile",
+  "title": "ECS Disclosure Profile",
+  "type": "object",
+  "required": [
+    "ecs_version",
+    "profile_id",
+    "artifact_id",
+    "posture",
+    "verification_limits"
+  ],
+  "properties": {
+    "ecs_version": {
+      "const": "1.0"
+    },
+    "profile_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "artifact_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "posture": {
+      "$ref": "urn:substratex:evidence-commons:1.0:schema:common-defs#/$defs/disclosurePosture"
+    },
+    "redactions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "ref",
+          "reason_category"
+        ],
+        "properties": {
+          "ref": {
+            "type": "string"
+          },
+          "reason_category": {
+            "type": "string"
+          },
+          "scope": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "verification_limits": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "consent_or_legal_basis": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "audience_restrictions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,31 @@
+{
+  "fixture_id": "comparison-conditional-without-conditions",
+  "schema": "comparability-assessment",
+  "expect_schema_valid": true,
+  "expect_semantic": "fail",
+  "notes": "",
+  "object": {
+    "ecs_version": "1.0",
+    "assessment_id": "urn:example:comparison:ab",
+    "purpose": "compare bounded evidence under same method family",
+    "artifact_ids": [
+      "urn:example:artifact:a",
+      "urn:example:artifact:b"
+    ],
+    "dimensions": {
+      "schema": "compatible",
+      "evidence_horizon": "compatible",
+      "method_version": "compatible",
+      "source_qualification": "compatible",
+      "coordinate_system": "compatible",
+      "claim_definition": "compatible",
+      "disclosure": "conditional",
+      "population_context": "compatible",
+      "validation_state": "compatible"
+    },
+    "conditions": [],
+    "outcome": "conditionally_comparable",
+    "evaluated_at": "2026-10-12T16:10:00Z",
+    "contract_ref": "urn:example:comparison-contract:1"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "@substratex/evidence-commons-rfc",
+  "version": "1.0.0-rfc.1",
+  "private": true,
+  "description": "Evidence Commons Standard (ECS) RFC specification and conformance corpus",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "scripts": {
+    "validate": "python scripts/validate.py"
+  }
+}

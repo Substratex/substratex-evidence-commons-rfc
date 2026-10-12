@@ -1,0 +1,17 @@
+{
+  "namespace": "urn:substratex:evidence-commons:1.0:challenge-category",
+  "values": [
+    "identity",
+    "provenance",
+    "method",
+    "scope",
+    "conformance",
+    "disclosure",
+    "privacy",
+    "comparison",
+    "aggregation",
+    "integrity",
+    "representation",
+    "other"
+  ]
+}

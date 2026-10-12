@@ -1,0 +1,29 @@
+{
+  "fixture_id": "federation-valid",
+  "schema": "federation-transfer",
+  "expect_schema_valid": true,
+  "expect_semantic": "pass",
+  "notes": "",
+  "object": {
+    "ecs_version": "1.0",
+    "transfer_id": "urn:example:transfer:a1",
+    "source_node": "urn:example:node:commons-1",
+    "destination_node": "urn:example:node:commons-2",
+    "artifact_id": "urn:example:artifact:a",
+    "mode": "preservation_replica",
+    "representation": "ecs-json",
+    "custody_intent": "secondary preservation copy",
+    "disclosure": "derived_evidence_only",
+    "integrity": {
+      "algorithm": "sha256",
+      "value": "0000000000000000000000000000000000000000000000000000000000000000",
+      "scope": "artifact-envelope"
+    },
+    "transferred_at": "2026-10-12T17:00:00Z",
+    "prior_custody_ref": "urn:example:preservation:a1",
+    "challenge_refs": [
+      "urn:example:challenge:a"
+    ],
+    "supersession_refs": []
+  }
+}

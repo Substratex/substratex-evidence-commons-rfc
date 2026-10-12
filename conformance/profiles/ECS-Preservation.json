@@ -1,0 +1,9 @@
+{
+  "profile": "ECS-Preservation",
+  "ecs_version": "1.0",
+  "required_object_types": [
+    "commons-artifact-envelope",
+    "preservation-record"
+  ],
+  "certification_note": "Conformance is not SubstrateX certification."
+}

@@ -1,0 +1,46 @@
+{
+  "fixture_id": "artifact-valid",
+  "schema": "commons-artifact-envelope",
+  "expect_schema_valid": true,
+  "expect_semantic": "pass",
+  "notes": "Baseline artifact envelope.",
+  "object": {
+    "ecs_version": "1.0",
+    "artifact_id": "urn:example:artifact:a",
+    "artifact_version": "1",
+    "origin": {
+      "originator_id": "urn:example:originator:1",
+      "origin_system": "Example Evidence System",
+      "origin_node": "urn:example:node:a"
+    },
+    "evidence_profile": {
+      "standard": "RES",
+      "version": "1.0-draft",
+      "conformance": [
+        "RES-Core",
+        "RES-Preservation"
+      ]
+    },
+    "evidence_object_ref": "urn:example:res:record:a",
+    "evidence_payload": {
+      "summary": "example derived evidence payload"
+    },
+    "disclosure": "derived_evidence_only",
+    "publication": "research",
+    "integrity": {
+      "algorithm": "sha256",
+      "value": "0000000000000000000000000000000000000000000000000000000000000000",
+      "scope": "artifact-envelope"
+    },
+    "provenance": [
+      {
+        "relation": "preserved-from",
+        "target": "urn:example:res:record:a"
+      }
+    ],
+    "review_state": "unreviewed",
+    "challenge_refs": [],
+    "supersedes": null,
+    "extensions": {}
+  }
+}

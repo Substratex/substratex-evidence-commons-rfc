@@ -1,0 +1,19 @@
+{
+  "fixture_id": "disclosure-redacted-no-limits",
+  "schema": "disclosure-profile",
+  "expect_schema_valid": true,
+  "expect_semantic": "fail",
+  "notes": "Semantic rule: non-complete posture needs verification limits.",
+  "object": {
+    "ecs_version": "1.0",
+    "profile_id": "urn:example:disclosure:a",
+    "artifact_id": "urn:example:artifact:a",
+    "posture": "redacted_source",
+    "redactions": [],
+    "verification_limits": [],
+    "consent_or_legal_basis": null,
+    "audience_restrictions": [
+      "research"
+    ]
+  }
+}

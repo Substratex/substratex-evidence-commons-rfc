@@ -1,0 +1,23 @@
+{
+  "profile": "ECS-Full",
+  "ecs_version": "1.0",
+  "required_object_types": [
+    "commons-artifact-envelope",
+    "admission-record",
+    "disclosure-profile",
+    "publication-record",
+    "comparability-assessment",
+    "challenge",
+    "counterevidence",
+    "review",
+    "supersession",
+    "withdrawal",
+    "aggregation-record",
+    "preservation-record",
+    "federation-transfer",
+    "custody-event",
+    "commons-node-manifest",
+    "conformance-report"
+  ],
+  "certification_note": "Conformance is not SubstrateX certification."
+}

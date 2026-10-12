@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:substratex:evidence-commons:1.0:schema:commons-node-manifest",
+  "title": "ECS Commons Node Manifest",
+  "type": "object",
+  "required": [
+    "ecs_version",
+    "node_id",
+    "operator",
+    "profiles",
+    "endpoint_or_location",
+    "policy_version"
+  ],
+  "properties": {
+    "ecs_version": {
+      "const": "1.0"
+    },
+    "node_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "operator": {
+      "type": "string",
+      "minLength": 1
+    },
+    "profiles": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "ECS-Artifact",
+          "ECS-Admission",
+          "ECS-Disclosure",
+          "ECS-Comparison",
+          "ECS-Aggregation",
+          "ECS-Preservation",
+          "ECS-Federation",
+          "ECS-Full"
+        ]
+      },
+      "minItems": 1
+    },
+    "endpoint_or_location": {
+      "type": "string",
+      "minLength": 1
+    },
+    "policy_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "supported_evidence_profiles": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "supported_schema_versions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}

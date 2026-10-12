@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:substratex:evidence-commons:1.0:schema:preservation-record",
+  "title": "ECS Preservation Record",
+  "type": "object",
+  "required": [
+    "ecs_version",
+    "preservation_id",
+    "artifact_id",
+    "event_type",
+    "custodian",
+    "integrity",
+    "preserved_at",
+    "disclosure",
+    "review_state"
+  ],
+  "properties": {
+    "ecs_version": {
+      "const": "1.0"
+    },
+    "preservation_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "artifact_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "event_type": {
+      "enum": [
+        "ingest",
+        "fixity_check",
+        "replication",
+        "migration",
+        "redaction",
+        "challenge_update",
+        "supersession",
+        "withdrawal",
+        "repackage",
+        "export",
+        "import"
+      ]
+    },
+    "custodian": {
+      "type": "string",
+      "minLength": 1
+    },
+    "integrity": {
+      "$ref": "urn:substratex:evidence-commons:1.0:schema:common-defs#/$defs/digest"
+    },
+    "preserved_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "disclosure": {
+      "$ref": "urn:substratex:evidence-commons:1.0:schema:common-defs#/$defs/disclosurePosture"
+    },
+    "review_state": {
+      "$ref": "urn:substratex:evidence-commons:1.0:schema:common-defs#/$defs/reviewState"
+    },
+    "prior_preservation_ref": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "migration": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "from_format": {
+          "type": "string"
+        },
+        "to_format": {
+          "type": "string"
+        },
+        "tool": {
+          "type": "string"
+        },
+        "validation": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "redaction_history_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}

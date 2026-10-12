@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:substratex:evidence-commons:1.0:schema:challenge",
+  "title": "ECS Challenge",
+  "type": "object",
+  "required": [
+    "ecs_version",
+    "challenge_id",
+    "target_ref",
+    "category",
+    "reason",
+    "created_at",
+    "status"
+  ],
+  "properties": {
+    "ecs_version": {
+      "const": "1.0"
+    },
+    "challenge_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "target_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "category": {
+      "enum": [
+        "identity",
+        "provenance",
+        "method",
+        "scope",
+        "conformance",
+        "disclosure",
+        "privacy",
+        "comparison",
+        "aggregation",
+        "integrity",
+        "representation",
+        "other"
+      ]
+    },
+    "reason": {
+      "type": "string",
+      "minLength": 1
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "challenger_ref": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "status": {
+      "enum": [
+        "open",
+        "under_review",
+        "resolved_upheld",
+        "resolved_revised",
+        "rejected",
+        "withdrawn"
+      ]
+    },
+    "counterevidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}

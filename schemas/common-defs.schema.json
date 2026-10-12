@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:substratex:evidence-commons:1.0:schema:common-defs",
+  "title": "ECS Common Definitions",
+  "$defs": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "digest": {
+      "type": "object",
+      "required": [
+        "algorithm",
+        "value",
+        "scope"
+      ],
+      "properties": {
+        "algorithm": {
+          "type": "string",
+          "minLength": 1
+        },
+        "value": {
+          "type": "string",
+          "minLength": 1
+        },
+        "scope": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "disclosurePosture": {
+      "enum": [
+        "complete_source",
+        "redacted_source",
+        "derived_evidence_only",
+        "metadata_only",
+        "withheld_restricted"
+      ]
+    },
+    "publicationClass": {
+      "enum": [
+        "public",
+        "restricted",
+        "research",
+        "organizational",
+        "exploratory",
+        "withdrawn"
+      ]
+    },
+    "reviewState": {
+      "enum": [
+        "unreviewed",
+        "under_review",
+        "contested",
+        "upheld",
+        "revised",
+        "superseded",
+        "withdrawn"
+      ]
+    },
+    "admissionDisposition": {
+      "enum": [
+        "admitted",
+        "admitted_restricted",
+        "exploratory",
+        "quarantined",
+        "refused",
+        "withdrawn"
+      ]
+    },
+    "comparabilityOutcome": {
+      "enum": [
+        "comparable",
+        "conditionally_comparable",
+        "non_comparable",
+        "indeterminate"
+      ]
+    },
+    "transferMode": {
+      "enum": [
+        "copy",
+        "custody_transfer",
+        "mirror",
+        "reference_only",
+        "preservation_replica"
+      ]
+    }
+  }
+}

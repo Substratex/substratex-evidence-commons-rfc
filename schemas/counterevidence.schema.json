@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:substratex:evidence-commons:1.0:schema:counterevidence",
+  "title": "ECS Counterevidence",
+  "type": "object",
+  "required": [
+    "ecs_version",
+    "counterevidence_id",
+    "challenge_id",
+    "evidence_ref",
+    "submitted_at",
+    "disclosure"
+  ],
+  "properties": {
+    "ecs_version": {
+      "const": "1.0"
+    },
+    "counterevidence_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "challenge_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evidence_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "submitted_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "disclosure": {
+      "$ref": "urn:substratex:evidence-commons:1.0:schema:common-defs#/$defs/disclosurePosture"
+    },
+    "submitter_ref": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

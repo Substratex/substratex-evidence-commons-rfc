@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:substratex:evidence-commons:1.0:schema:publication-record",
+  "title": "ECS Publication Record",
+  "type": "object",
+  "required": [
+    "ecs_version",
+    "publication_id",
+    "artifact_id",
+    "node_id",
+    "class",
+    "effective_at"
+  ],
+  "properties": {
+    "ecs_version": {
+      "const": "1.0"
+    },
+    "publication_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "artifact_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "node_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "class": {
+      "$ref": "urn:substratex:evidence-commons:1.0:schema:common-defs#/$defs/publicationClass"
+    },
+    "effective_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "prior_publication_ref": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "access_policy_ref": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "reason": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

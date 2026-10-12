@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:substratex:evidence-commons:1.0:schema:custody-event",
+  "title": "ECS Custody Event",
+  "type": "object",
+  "required": [
+    "ecs_version",
+    "custody_event_id",
+    "artifact_id",
+    "node_id",
+    "event",
+    "occurred_at"
+  ],
+  "properties": {
+    "ecs_version": {
+      "const": "1.0"
+    },
+    "custody_event_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "artifact_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "node_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "event": {
+      "enum": [
+        "received",
+        "released",
+        "mirrored",
+        "preserved",
+        "deleted_local_copy",
+        "restricted",
+        "unrestricted"
+      ]
+    },
+    "occurred_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "transfer_ref": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "note": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

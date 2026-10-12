@@ -1,0 +1,18 @@
+{
+  "fixture_id": "publication-invalid-class",
+  "schema": "publication-record",
+  "expect_schema_valid": false,
+  "expect_semantic": "fail",
+  "notes": "",
+  "object": {
+    "ecs_version": "1.0",
+    "publication_id": "urn:example:publication:a",
+    "artifact_id": "urn:example:artifact:a",
+    "node_id": "urn:example:node:commons-1",
+    "class": "open",
+    "effective_at": "2026-10-12T16:01:00Z",
+    "prior_publication_ref": null,
+    "access_policy_ref": "urn:example:policy:research",
+    "reason": null
+  }
+}

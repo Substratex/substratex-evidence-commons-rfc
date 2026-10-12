@@ -1,0 +1,10 @@
+{
+  "namespace": "urn:substratex:evidence-commons:1.0:transfer-mode",
+  "values": [
+    "copy",
+    "custody_transfer",
+    "mirror",
+    "reference_only",
+    "preservation_replica"
+  ]
+}

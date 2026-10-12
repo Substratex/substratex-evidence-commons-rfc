@@ -1,0 +1,154 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:substratex:evidence-commons:1.0:schema:comparability-assessment",
+  "title": "ECS Comparability Assessment",
+  "type": "object",
+  "required": [
+    "ecs_version",
+    "assessment_id",
+    "purpose",
+    "artifact_ids",
+    "dimensions",
+    "outcome",
+    "evaluated_at"
+  ],
+  "properties": {
+    "ecs_version": {
+      "const": "1.0"
+    },
+    "assessment_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "purpose": {
+      "type": "string",
+      "minLength": 1
+    },
+    "artifact_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 2,
+      "uniqueItems": true
+    },
+    "dimensions": {
+      "type": "object",
+      "required": [
+        "schema",
+        "evidence_horizon",
+        "method_version",
+        "source_qualification",
+        "coordinate_system",
+        "claim_definition",
+        "disclosure",
+        "population_context",
+        "validation_state"
+      ],
+      "properties": {
+        "schema": {
+          "enum": [
+            "compatible",
+            "conditional",
+            "incompatible",
+            "unknown",
+            "not_applicable"
+          ]
+        },
+        "evidence_horizon": {
+          "enum": [
+            "compatible",
+            "conditional",
+            "incompatible",
+            "unknown",
+            "not_applicable"
+          ]
+        },
+        "method_version": {
+          "enum": [
+            "compatible",
+            "conditional",
+            "incompatible",
+            "unknown",
+            "not_applicable"
+          ]
+        },
+        "source_qualification": {
+          "enum": [
+            "compatible",
+            "conditional",
+            "incompatible",
+            "unknown",
+            "not_applicable"
+          ]
+        },
+        "coordinate_system": {
+          "enum": [
+            "compatible",
+            "conditional",
+            "incompatible",
+            "unknown",
+            "not_applicable"
+          ]
+        },
+        "claim_definition": {
+          "enum": [
+            "compatible",
+            "conditional",
+            "incompatible",
+            "unknown",
+            "not_applicable"
+          ]
+        },
+        "disclosure": {
+          "enum": [
+            "compatible",
+            "conditional",
+            "incompatible",
+            "unknown",
+            "not_applicable"
+          ]
+        },
+        "population_context": {
+          "enum": [
+            "compatible",
+            "conditional",
+            "incompatible",
+            "unknown",
+            "not_applicable"
+          ]
+        },
+        "validation_state": {
+          "enum": [
+            "compatible",
+            "conditional",
+            "incompatible",
+            "unknown",
+            "not_applicable"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "conditions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "outcome": {
+      "$ref": "urn:substratex:evidence-commons:1.0:schema:common-defs#/$defs/comparabilityOutcome"
+    },
+    "evaluated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "contract_ref": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

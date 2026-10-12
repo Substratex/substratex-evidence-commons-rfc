@@ -1,0 +1,23 @@
+{
+  "fixture_id": "review-valid",
+  "schema": "review",
+  "expect_schema_valid": true,
+  "expect_semantic": "pass",
+  "notes": "",
+  "object": {
+    "ecs_version": "1.0",
+    "review_id": "urn:example:review:a",
+    "target_refs": [
+      "urn:example:artifact:a",
+      "urn:example:challenge:a"
+    ],
+    "process": "declared Commons review procedure v1",
+    "outcome": "unresolved",
+    "reviewed_at": "2026-10-12T16:30:00Z",
+    "reviewer_role": "independent reviewer",
+    "finding": "Additional method metadata requested",
+    "unresolved_questions": [
+      "exact threshold version"
+    ]
+  }
+}

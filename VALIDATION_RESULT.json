@@ -1,0 +1,8 @@
+{
+  "schema_self_validation": "pass",
+  "fixtures": "ECS fixture validation: 41/41 passed, 0 failed",
+  "schema_count": 17,
+  "fixture_count": 41,
+  "fixture_exit_code": 0,
+  "report_validation": "pass"
+}

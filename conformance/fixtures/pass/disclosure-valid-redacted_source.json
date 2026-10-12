@@ -1,0 +1,21 @@
+{
+  "fixture_id": "disclosure-valid-redacted_source",
+  "schema": "disclosure-profile",
+  "expect_schema_valid": true,
+  "expect_semantic": "pass",
+  "notes": "",
+  "object": {
+    "ecs_version": "1.0",
+    "profile_id": "urn:example:disclosure:redacted_source",
+    "artifact_id": "urn:example:artifact:a",
+    "posture": "redacted_source",
+    "redactions": [],
+    "verification_limits": [
+      "limits apply to redacted_source"
+    ],
+    "consent_or_legal_basis": null,
+    "audience_restrictions": [
+      "research"
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "ecs_version": "1.0",
+  "challenge_id": "urn:example:challenge:a",
+  "target_ref": "urn:example:artifact:a",
+  "category": "method",
+  "reason": "Method version disclosure requires review",
+  "created_at": "2026-10-12T16:20:00Z",
+  "challenger_ref": "urn:example:reviewer:1",
+  "status": "open",
+  "counterevidence_refs": []
+}
